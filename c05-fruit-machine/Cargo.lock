@@ -87,6 +87,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "14c189c53d098945499cdfa7ecc63567cf3886b3332b312a5b4585d8d3a6a610"
 
 [[package]]
+name = "c05-fruit-machine"
+version = "0.1.0"
+dependencies = [
+ "engine",
+ "rand",
+]
+
+[[package]]
 name = "calloop"
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -504,14 +512,6 @@ dependencies = [
  "cmake",
  "libc",
  "pkg-config",
-]
-
-[[package]]
-name = "fruit-machine"
-version = "0.1.0"
-dependencies = [
- "engine",
- "rand",
 ]
 
 [[package]]
