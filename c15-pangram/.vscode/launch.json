@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'c05-fruit-machine'",
+            "name": "Debug executable 'c15-pangram'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=c05-fruit-machine",
-                    "--package=c05-fruit-machine"
+                    "--bin=c15-pangram",
+                    "--package=c15-pangram"
                 ],
                 "filter": {
-                    "name": "c05-fruit-machine",
+                    "name": "c15-pangram",
                     "kind": "bin"
                 }
             },
@@ -25,16 +25,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'fruit-machine'",
+            "name": "Debug unit tests in executable 'c15-pangram'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=c05-fruit-machine",
-                    "--package=c05-fruit-machine"
+                    "--bin=c15-pangram",
+                    "--package=c15-pangram"
                 ],
                 "filter": {
-                    "name": "c05-fruit-machine",
+                    "name": "c15-pangram",
                     "kind": "bin"
                 }
             },
