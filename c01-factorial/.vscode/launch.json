@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'factorial'",
+            "name": "Debug executable 'c01-factorial'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=factorial",
-                    "--package=factorial"
+                    "--bin=c01-factorial",
+                    "--package=c01-factorial"
                 ],
                 "filter": {
-                    "name": "factorial",
+                    "name": "c01-factorial",
                     "kind": "bin"
                 }
             },
@@ -25,16 +25,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'factorial'",
+            "name": "Debug unit tests in executable 'c01-factorial'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=factorial",
-                    "--package=factorial"
+                    "--bin=c01-factorial",
+                    "--package=c01-factorial"
                 ],
                 "filter": {
-                    "name": "factorial",
+                    "name": "c01-factorial",
                     "kind": "bin"
                 }
             },
