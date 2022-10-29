@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'thief'",
+            "name": "Debug executable 'c03-thief'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=thief",
-                    "--package=thief"
+                    "--bin=c03-thief",
+                    "--package=c03-thief"
                 ],
                 "filter": {
-                    "name": "thief",
+                    "name": "c03-thief",
                     "kind": "bin"
                 }
             },
@@ -25,16 +25,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'thief'",
+            "name": "Debug unit tests in executable 'c03-thief'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=thief",
-                    "--package=thief"
+                    "--bin=c03-thief",
+                    "--package=c03-thief"
                 ],
                 "filter": {
-                    "name": "thief",
+                    "name": "c03-thief",
                     "kind": "bin"
                 }
             },

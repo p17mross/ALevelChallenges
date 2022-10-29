@@ -1,6 +1,7 @@
 #[macro_use]
 extern crate text_io;
 
+/// A function to print all the combinations of the characters in a string
 fn print_combinations(s: String, c: String) {
     //base case
     if c == "" {
