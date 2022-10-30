@@ -1,3 +1,7 @@
+// Provides read!() macro
+#[macro_use]
+extern crate text_io;
+
 const SMALL_NUMS: [&str; 20] = [
     "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", 
     "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"
@@ -69,6 +73,8 @@ fn get_name(i: i64) -> String {
 }
 
 fn main() {
-    let i = 79894989944;
+    print!("Enter a number: ");
+    let i: String = read!();
+    let i = i.parse::<i64>().expect("Enter a valid i64");
     println!("Name of {i} is '{}'", get_name(i));
 }

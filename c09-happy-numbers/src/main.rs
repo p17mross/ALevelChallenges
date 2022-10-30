@@ -1,4 +1,4 @@
-//funtion to check if a number is a happy number or not
+//A function to check if a number is a happy number or not
 fn is_happy(i: u64) -> bool {
     let mut next = i;
     //keep track of previousy visited numbers to detect loops
@@ -32,6 +32,7 @@ fn main() {
     let mut i = 0;
     let mut found = 0;
     //find first 20
+    println!("The first 20 happy numbers are:");
     while found < 20 {
         i += 1;
         if is_happy(i) {
