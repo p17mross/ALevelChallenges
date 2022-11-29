@@ -1,6 +1,6 @@
 # Challenge 33 - Morse Code
 
-A program to conver text to or from morse code
+A program to convert text to or from morse code
 
 ![image](images/example.png)
 
