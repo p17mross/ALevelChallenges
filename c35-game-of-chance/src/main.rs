@@ -11,29 +11,21 @@ const PRIMES_UNDER_30: [u64; 10] = [
 /// Calculates the reward given the user's wager, the user's guess and the result.
 fn calculate_reward(wager: u64, guess: u64, result: u64) -> u64 {
     // Calculate multiplier
-    let multiplier = match result {
-        // Immediately return 0 if r != guess
-        r if r != guess => return 0,
-        // 5x multiplier if r is prime
-        r if PRIMES_UNDER_30.contains(&r) => 5,
-        // 3x multiplier if r is a multiple of 10
-        r if r % 10 == 0 => 3,
-        // 2x multiplier if r is a multiple of 2
-        r if r % 2 == 0 => 2,
-        // 1x multiplier otherwise
-        _ => 1,
-    };
+    let mut multiplier = 1;
 
-    // Calculate bonus multiplier
-    let bonus = match result {
-        // bonus 2x multiplier if r is less than 5
-        r if r < 5 => 2,
-        // no bonus multiplier otherwise
-        _ => 5,
-    };
+    if guess != result {return 0}
+
+    // If r is even, 2x multiplier
+    if guess % 2 == 0 {multiplier *= 2};
+    // If r is a multiple of 10, 3x multiplier
+    if guess % 10 == 0 {multiplier *= 3};
+    // If r is prime, 5x multiplier
+    if PRIMES_UNDER_30.contains(&guess) {multiplier *= 5};
+    // If r is less than 5, 2x multiplier
+    if guess < 5 {multiplier *= 2};
 
     // Calculate final reward
-    wager * multiplier * bonus
+    wager * multiplier
 }
 
 /// Reads a positive number from stdin given an upper bound and a prompt describing 
@@ -79,7 +71,7 @@ fn main() {
     while balance != 0 {
         // Input guess and wager
         let guess = read_u64("a guess", 30).unwrap();
-        let wager = read_u64("a wager", balance).unwrap();
+        let wager = read_u64("a wager", u64::min(balance, 10)).unwrap();
 
         // Subtract wager from balance
         balance -= wager;
